@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Форма по добавлению цветка {% endblock %}
+
+{% block content %}
+<div class="features">
+  <h1> Удаление цветка </h1>
+
+  <form method="post">
+    {% csrf_token %}
+    <button class="btn btn-success" type="submit"> Удалить цветок </button>
+  </form>
+
+</div>
+{% endblock %}

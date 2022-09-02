@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Цветочный магазин{% endblock %}
+
+{% block content %}
+<div class="features">
+
+    <h1>Цветочный магазин</h1>
+
+
+  {% if shop %}
+    {%  for el in shop %}
+      <div class="alert alert-warning">
+        <h3> {{ el.title }}</h3>
+        <p> {{ el.description | truncatechars:100 }}</p>
+        <a href="{% url 'shop_detail' el.id %}" class="btn btn-warning">Прочитать подробнее</a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p> Нет цветов на складе </p>
+  {% endif %}
+
+  {# Комментарий не отображается на странице#}
+</div>
+{% endblock %}

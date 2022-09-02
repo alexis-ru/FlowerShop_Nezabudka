@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Про нас{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Контакты</h1>
+    <h3>Адреса наших магазинов: </h3>
+    {% if data %}
+    {% for el in data %}
+    <div class="alert alert-warning">
+        <p style="font-weight: bold; color: blue">{{ el.titles }}</p>
+        <p style="color: black">{{ el.places }}</p>
+        <p style="color: black">{{ el.description }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

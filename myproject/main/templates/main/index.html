@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Цветочный магазин - Незабудка</h1><br>
+    <h3>Мы дарим радость вашим любимым и близким)</h3>
+    Адреса наших магазинов и контакты для онлайн-заказов ---> <a href="{% url 'about' %}" class="btn btn-info">Контакты</a>
+</div>
+{% endblock %}
